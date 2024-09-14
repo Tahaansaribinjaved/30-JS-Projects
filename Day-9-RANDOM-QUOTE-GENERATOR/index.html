@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Happiness Quote Generator</title>
+  <script defer src="script.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <div class="max-w-md mx-auto bg-white rounded-xl shadow-lg p-6 text-center">
+    <h1 class="text-2xl font-bold mb-4">Random Happiness Quote Generator</h1>
+    <p id="quote" class="text-lg italic text-gray-700 mb-4">Click below to generate a happiness quote!</p>
+    <div id="loader" class="hidden">
+      <div class="w-16 h-16 border-t-4 border-blue-500 border-solid rounded-full animate-spin mx-auto"></div>
+    </div>
+    <button
+      id="generateQuoteBtn"
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-4"
+    >
+      Get Quote
+    </button>
+  </div>
+</body>
+</html>

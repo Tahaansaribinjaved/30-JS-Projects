@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Calculator</title>
+  <script src="script.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-black flex justify-center items-center min-h-screen">
+
+  <div class="bg-white rounded-lg shadow-md p-6 w-80 md:w-96">
+    <h1 class="text-2xl font-bold text-center mb-4">Basic Calculator</h1>
+    <div class="mb-4">
+      <input id="display" type="text" class="w-full h-12 text-right p-2 border border-gray-300 rounded-md focus:outline-none" disabled>
+    </div>
+    <div class="grid grid-cols-4 gap-4">
+      <button class="btn">7</button>
+      <button class="btn">8</button>
+      <button class="btn">9</button>
+      <button class="btn text-red-500">/</button>
+      <button class="btn">4</button>
+      <button class="btn">5</button>
+      <button class="btn">6</button>
+      <button class="btn text-red-500">*</button>
+      <button class="btn">1</button>
+      <button class="btn">2</button>
+      <button class="btn">3</button>
+      <button class="btn text-red-500">-</button>
+      <button class="btn">0</button>
+      <button class="btn">.</button>
+      <button class="btn text-green-500">=</button>
+      <button class="btn text-red-500">+</button>
+      <button class="btn text-yellow-500 col-span-2">Clear</button>
+    </div>
+  </div>
+
+</body>
+</html>

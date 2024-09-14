@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white text-center py-4">
+    <h1 class="text-3xl font-bold">Knowledge Quiz</h1>
+  </header>
+
+  <!-- Start Button -->
+  <div id="start-container" class="flex justify-center items-center h-screen">
+    <button id="start-btn" class="bg-blue-500 text-white py-3 px-6 rounded-lg text-xl hover:bg-blue-600">
+      Start Quiz
+    </button>
+  </div>
+
+  <!-- Quiz Content -->
+  <div id="quiz-container" class="container mx-auto mt-8 hidden">
+    <div class="bg-white p-8 rounded-lg shadow-lg">
+      <h2 id="question" class="text-2xl font-semibold mb-4">Question will appear here...</h2>
+      <ul id="answers" class="list-none space-y-2"></ul>
+    </div>
+
+    <div class="mt-4 text-right">
+      <button id="next-btn" class="bg-blue-500 text-white py-2 px-4 rounded-lg hidden">Next Question</button>
+    </div>
+
+</div>
+<!-- Result Section -->
+<div id="result-container" class="hidden bg-white p-8 mt-8 rounded-lg shadow-lg text-center">
+  <h2 id="result-message" class="text-3xl font-semibold mb-4"></h2>
+  <button id="restart-btn" class="bg-blue-500 text-white py-2 px-4 rounded-lg hidden">Restart Quiz</button>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
