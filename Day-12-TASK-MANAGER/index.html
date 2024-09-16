@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Additional custom styles */
+        #loader {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        #loader div {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .toast {
+            position: fixed;
+            top: 4rem;
+            right: 1rem;
+            padding: 1rem;
+            border-radius: 0.375rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            color: #fff;
+            z-index: 1000;
+        }
+        .toast.success {
+            background-color: #38a169;
+        }
+        .toast.error {
+            background-color: #e53e3e;
+        }
+        .toast svg {
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <div></div>
+    </div>
+
+    <!-- Task Manager -->
+    <div class="container mx-auto p-6">
+        <!-- Add Task Button -->
+        <button id="openModalBtn" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-700">Add Task</button>
+
+        <!-- Filter Options -->
+        <div class="my-4">
+            <button id="filterAll" class="bg-gray-500 text-white p-2 rounded hover:bg-gray-700">All Tasks</button>
+            <button id="filterCompleted" class="bg-green-500 text-white p-2 rounded hover:bg-green-700">Completed</button>
+            <button id="filterIncomplete" class="bg-yellow-500 text-white p-2 rounded hover:bg-yellow-700">Incomplete</button>
+            <button id="clearTasksBtn" class="bg-red-500 text-white p-2 rounded hover:bg-red-700">Clear All Tasks</button>
+        </div>
+
+        <!-- Task List -->
+        <ul id="taskList" class="list-none p-0"></ul>
+    </div>
+
+    <!-- Add Task Modal -->
+    <div id="taskModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center hidden">
+        <div class="bg-white p-6 rounded-lg w-80">
+            <h2 class="text-lg font-semibold mb-4">Add Task</h2>
+            <input id="taskInput" type="text" placeholder="Enter task" class="border border-gray-300 p-2 w-full mb-4 rounded">
+            <input id="taskDate" type="date" class="border border-gray-300 p-2 w-full mb-4 rounded">
+            <button id="addTaskBtn" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-700">Add Task</button>
+            <button id="closeModalBtn" class="bg-gray-500 text-white p-2 rounded hover:bg-gray-700 mt-2">Close</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
