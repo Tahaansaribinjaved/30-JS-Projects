@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Search App</title>
+  <script defer src="app.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+  <div class="container mx-auto py-10">
+    <h1 class="text-4xl font-bold text-center mb-6">Movie Search App</h1>
+    <div class="flex justify-center mb-8">
+      <input id="searchInput" type="text" placeholder="Search for a movie..." class="p-3 w-3/4 md:w-1/2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      <button id="searchBtn" class="ml-3 bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-md">Search</button>
+    </div>
+    <!-- Loader -->
+    <div id="loader" class="flex justify-center items-center py-6 hidden">
+      <div class="animate-spin rounded-full h-32 w-32 border-t-4 border-indigo-500"></div>
+    </div>
+    <!-- Movie List -->
+    <div id="movieList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </div>
+</body>
+</html
