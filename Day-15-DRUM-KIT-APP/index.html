@@ -1,34 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Drum Kit App</title>
-  <script src="app.js" defer></script>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-900 text-white flex items-center justify-center h-screen">
-  <div class="grid grid-cols-3 gap-4">
-    <div class="drum bg-blue-500 p-8 rounded-lg shadow-lg text-center text-xl" data-key="65">A<br>Clap</div>
-    <div class="drum bg-red-500 p-8 rounded-lg shadow-lg text-center text-xl" data-key="83">S<br>Hi-Hat</div>
-    <div class="drum bg-yellow-500 p-8 rounded-lg shadow-lg text-center text-xl" data-key="68">D<br>Kick</div>
-    <div class="drum bg-green-500 p-8 rounded-lg shadow-lg text-center text-xl" data-key="70">F<br>Open-Hat</div>
-    <div class="drum bg-purple-500 p-8 rounded-lg shadow-lg text-center text-xl" data-key="71">G<br>Boom</div>
-    <div class="drum bg-pink-500 p-8 rounded-lg shadow-lg text-center text-xl" data-key="72">H<br>Ride</div>
-    <div class="drum bg-indigo-500 p-8 rounded-lg shadow-lg text-center text-xl" data-key="74">J<br>Snare</div>
-    <div class="drum bg-teal-500 p-8 rounded-lg shadow-lg text-center text-xl" data-key="75">K<br>Tink</div>
-    <div class="drum bg-orange-500 p-8 rounded-lg shadow-lg text-center text-xl" data-key="76">L<br>Tom</div>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drum Kit App</title>
+    <script src="app.js" defer></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-gray-900 text-white flex items-center justify-center h-screen"
+  >
+    <div class="grid grid-cols-3 gap-4">
+      <div
+        class="drum bg-blue-500 p-8 rounded-lg shadow-lg text-center text-xl"
+        data-key="65"
+      >
+        A<br />Clap
+      </div>
+      <div
+        class="drum bg-red-500 p-8 rounded-lg shadow-lg text-center text-xl"
+        data-key="83"
+      >
+        S<br />Hi-Hat
+      </div>
+      <div
+        class="drum bg-yellow-500 p-8 rounded-lg shadow-lg text-center text-xl"
+        data-key="68"
+      >
+        D<br />Kick
+      </div>
+      <div
+        class="drum bg-green-500 p-8 rounded-lg shadow-lg text-center text-xl"
+        data-key="70"
+      >
+        F<br />Open-Hat
+      </div>
+      <div
+        class="drum bg-purple-500 p-8 rounded-lg shadow-lg text-center text-xl"
+        data-key="71"
+      >
+        G<br />Boom
+      </div>
+      <div
+        class="drum bg-pink-500 p-8 rounded-lg shadow-lg text-center text-xl"
+        data-key="72"
+      >
+        H<br />Ride
+      </div>
+      <div
+        class="drum bg-indigo-500 p-8 rounded-lg shadow-lg text-center text-xl"
+        data-key="74"
+      >
+        J<br />Snare
+      </div>
+      <div
+        class="drum bg-teal-500 p-8 rounded-lg shadow-lg text-center text-xl"
+        data-key="75"
+      >
+        K<br />Tink
+      </div>
+      <div
+        class="drum bg-orange-500 p-8 rounded-lg shadow-lg text-center text-xl"
+        data-key="76"
+      >
+        L<br />Tom
+      </div>
+    </div>
 
-  <!-- Audio Elements with Online Sound URLs -->
-  <audio data-key="65" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"></audio>
-  <audio data-key="83" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"></audio>
-  <audio data-key="68" src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"></audio>
-  <audio data-key="70" src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"></audio>
-  <audio data-key="71" src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"></audio>
-  <audio data-key="72" src="https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3"></audio>
-  <audio data-key="74" src="https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3"></audio>
-  <audio data-key="75" src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"></audio>
-  <audio data-key="76" src="https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3"></audio>
-</body>
+    <!-- Audio Elements with Online Sound URLs -->
+    <audio
+      data-key="65"
+      src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"
+    ></audio>
+    <audio
+      data-key="83"
+      src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"
+    ></audio>
+    <audio
+      data-key="68"
+      src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"
+    ></audio>
+    <audio
+      data-key="70"
+      src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"
+    ></audio>
+    <audio
+      data-key="71"
+      src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"
+    ></audio>
+    <audio
+      data-key="72"
+      src="https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3"
+    ></audio>
+    <audio
+      data-key="74"
+      src="https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3"
+    ></audio>
+    <audio
+      data-key="75"
+      src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"
+    ></audio>
+    <audio
+      data-key="76"
+      src="https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3"
+    ></audio>
+  </body>
 </html>

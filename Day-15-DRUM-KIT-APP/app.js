@@ -1,8 +1,8 @@
 window.addEventListener("keydown", playSound);
 const drums = document.querySelectorAll(".drum");
 
-drums.forEach(drum => {
-  drum.addEventListener("click", function() {
+drums.forEach((drum) => {
+  drum.addEventListener("click", function () {
     playSound({ keyCode: drum.dataset.key });
   });
 });
