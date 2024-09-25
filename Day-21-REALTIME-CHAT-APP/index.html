@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real-time Chat App</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+  <div class="container mx-auto p-4">
+    <div class="max-w-lg mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+      <div class="bg-blue-500 p-4">
+        <h1 class="text-white text-xl font-bold text-center">Real-time Chat App</h1>
+      </div>
+
+      <div id="chatWindow" class="p-4 h-80 overflow-y-auto bg-gray-50"></div>
+
+      <div class="p-4 bg-white border-t">
+        <form id="chatForm" class="flex">
+          <input
+            type="text"
+            id="messageInput"
+            class="flex-1 p-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Type your message here..."
+          />
+          <button
+            type="submit"
+            class="p-2 bg-blue-500 text-white font-semibold rounded-r-lg hover:bg-blue-600 transition-colors"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const chatWindow = document.getElementById('chatWindow');
+    const chatForm = document.getElementById('chatForm');
+    const messageInput = document.getElementById('messageInput');
+
+    // Connect to WebSocket server
+    const socket = new WebSocket('ws://localhost:8080');
+
+    // Listen for messages from the WebSocket server
+    socket.addEventListener('message', function (event) {
+      const message = event.data;
+      console.log(event);
+      
+      displayMessage(message, 'received');
+    });
+
+    // Send message to WebSocket server
+    chatForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const message = messageInput.value.trim();
+      if (message) {
+        socket.send(message);
+        displayMessage(message, 'sent');
+        messageInput.value = '';
+      }
+    });
+
+    // Display message in the chat window
+    function displayMessage(message, type) {
+      const messageDiv = document.createElement('div');
+      messageDiv.classList.add('my-2', 'p-2', 'rounded-lg', 'w-fit', 'max-w-xs');
+      messageDiv.textContent = message;
+
+      if (type === 'sent') {
+        messageDiv.classList.add('bg-blue-500', 'text-white', 'ml-auto');
+      } else {
+        messageDiv.classList.add('bg-gray-200', 'text-black');
+      }
+
+      chatWindow.appendChild(messageDiv);
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+    }
+  </script>
+</body>
+</html>
