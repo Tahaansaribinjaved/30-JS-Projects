@@ -45,10 +45,10 @@
 
     // Listen for messages from the WebSocket server
     socket.addEventListener('message', function (event) {
-      const message = event.data;
-      console.log(event);
-      
-      displayMessage(message, 'received');
+      // Convert Blob or data to a text string
+      event.data.text().then(message => {
+        displayMessage(message, 'received');
+      });
     });
 
     // Send message to WebSocket server
@@ -56,7 +56,7 @@
       e.preventDefault();
       const message = messageInput.value.trim();
       if (message) {
-        socket.send(message);
+        socket.send(message);  // Send the message as a string
         displayMessage(message, 'sent');
         messageInput.value = '';
       }
