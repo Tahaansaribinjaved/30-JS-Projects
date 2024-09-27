@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            background-image: url('https://source.unsplash.com/random/1920x1080/?nature');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+  
+</head>
+<body class="flex items-center justify-center h-screen">
+    <div class="bg-white bg-opacity-80 rounded-lg shadow-lg p-8 max-w-md text-center">
+        <h1 id="greeting" class="text-3xl font-bold text-gray-800"></h1>
+        <p class="mt-4 text-gray-600">We're glad to have you here. Explore the features and enjoy your experience.</p>
+        <div class="mt-6">
+            <button id="logoutUser" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition duration-200">Logout</button>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+    
+</body>
+</html>
