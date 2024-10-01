@@ -1,7 +1,7 @@
 // Helper function to create a new task element
 function createTaskElement(id, taskName) {
     const task = document.createElement('div');
-    task.classList.add('task', "h-16",'bg-blue-100', 'p-3', 'rounded-md', 'cursor-pointer', 'flex', 'justify-between', 'items-center');
+    task.classList.add('task', 'bg-blue-100', 'p-3', 'rounded-md', 'cursor-pointer', 'flex', 'justify-between', 'items-center');
     task.setAttribute('draggable', 'true');
     task.id = id;
     
@@ -34,7 +34,7 @@ function createTaskElement(id, taskName) {
   }
   
   // Initialize task counters and drag data
-  let taskIdCounter = 1;
+  let taskIdCounter = 5; // Start with 5 since there are 4 default tasks
   let draggedTask = null;
   
   // Add new task functionality
