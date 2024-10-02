@@ -27,7 +27,7 @@ async function fetchNlpResponse(message) {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Bearer sk-pcyMCFTXaL_1cRLhAN6iO_PkeROhTfSzCAqDgLjD8JT3BlbkFJ1YWHDHDg1yLPm9ZaEkJyfs9SBE3lvEy5GphJXEEtgA`
+                "Authorization": `Bearer `
             },
             body: JSON.stringify({
                 model: "gpt-3.5-turbo",
