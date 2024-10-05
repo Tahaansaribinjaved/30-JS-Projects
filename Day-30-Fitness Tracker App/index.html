@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Fitness Tracker App</title>
+</head>
+<body class="bg-gray-100 flex flex-col items-center p-5">
+
+    <h1 class="text-3xl font-bold mb-5">Fitness Tracker</h1>
+
+    <div class="bg-white shadow-md rounded p-5 w-full max-w-md">
+        <form id="activityForm" class="flex flex-col">
+            <input type="text" id="activity" placeholder="Activity" class="p-2 mb-3 border rounded">
+            <input type="number" id="calories" placeholder="Calories Burned" class="p-2 mb-3 border rounded">
+            <button type="submit" class="bg-blue-500 text-white rounded p-2">Log Activity</button>
+        </form>
+    </div>
+
+    <div class="mt-5 w-full max-w-md">
+        <h2 class="text-xl font-bold">Activity Log</h2>
+        <ul id="activityLog" class="bg-white rounded shadow-md mt-3 p-3 space-y-2"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
